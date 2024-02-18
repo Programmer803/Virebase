@@ -12,6 +12,6 @@ This project is designed to create Trojans and viruses. This project aims to imp
 In the first step, you have to run the virebase.py file, then select one of the desired options from the menu.
 In the next section, you will personalize your desired Trojan and enter an icon, name, etc. (personalization will be improved in future versions) and finally you will receive an exe file.
 
-This file is the desired file that you should give to your target, then when the file is executed in the target ### system, you will be able to connect to your target on port 25.
+This file is the desired file that you should give to your target, then when the file is executed in the target system, you will be able to connect to your target on port 25.
 And you can do this with telnet
 (In future versions, this section will be easier)
