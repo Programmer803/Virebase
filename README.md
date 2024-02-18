@@ -1,4 +1,4 @@
-<img src="https://github.com/Programmer803/Virebase/blob/main/sd.PNG">
+<img src="https://github.com/Programmer803/Virebase/blob/main/image.PNG">
 
 # Virebase
 Make trojan and all types of viruses (Beta version) just 2
