@@ -44,7 +44,7 @@ def list_choice():
     
     print("Advanced trojan" , tag="1" , color="green" , tag_color="magenta" , end="\n\n")
     
-    print("Very Simple" , tag="2" , color="green" , tag_color="magenta" , end="\n\n")
+    print("Simple trojan" , tag="2" , color="green" , tag_color="magenta" , end="\n\n")
     
 
 list_choice()
@@ -54,13 +54,13 @@ list_choice()
 
 print("[$[User]$] --> " , color="magenta" , end="")
 
-chose = int(input(""))
+choise = int(input(""))
 
 
 
 def Maker(file , make = make):
     
-    make =  make+ f""" "{file}" """ 
+    make =  make+ f""" "{file}" """
 
     clear()
         
@@ -105,11 +105,11 @@ def Maker(file , make = make):
 # **********************************
 # **********************************
 
-if chose == 1:
+if choise == 1:
     
     Maker("template/troj_advance.py")
     
-elif chose == 2:
+elif choise == 2:
     
     Maker("template/simple_met.py")
     
